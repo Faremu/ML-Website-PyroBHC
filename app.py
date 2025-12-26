@@ -20,6 +20,11 @@ MODEL_DIR = os.path.join(
     "static",
     "model",
 )
+OTHERS_DIR = os.path.join(
+    app.root_path,
+    "static",
+    "others",
+)
 
 # Models
 with open(os.path.join(MODEL_DIR,"model_nonprecious_lightgbm_tuned.pkl"), "rb") as f:
@@ -28,11 +33,11 @@ with open(os.path.join(MODEL_DIR,"model_nonprecious_lightgbm_tuned.pkl"), "rb") 
     non_precious_model = pickle.load(f)
 
 # Encoder and Scaler
-with open("labelencoder.pkl", 'rb') as file:
+with open(os.path.join(OTHERS_DIR,"labelencoder.pkl"), 'rb') as file:
     labelencoder = pickle.load(file)
-with open("pscaler.pkl", 'rb') as file:
+with open(os.path.join(OTHERS_DIR,"pscaler.pkl"), 'rb') as file:
         pscaler = pickle.load(file)
-with open("npscaler.pkl", 'rb') as file:
+with open(os.path.join(OTHERS_DIR,"npscaler.pkl"), 'rb') as file:
     npscaler = pickle.load(file)
 
 def preprocessing(is_precious, X):
