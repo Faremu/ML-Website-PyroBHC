@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+body{
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "GRAD" 0;
+}
+.pinput {
+    border-radius: 0.25rem;    /* rounded */
+    width: 5rem;               /* w-20 */
+    height: 1.25rem;            /* h-6 */
+    margin-left: 1.25rem;      /* ml-5 */
+
+    /* ring-2 ring-black */
+    box-shadow: 0 0 0 1px #000; /* Tailwind ring = outline via box-shadow */
+
+    background-color: #93c5fd; /* bg-blue-300 */
+    text-align: center;
+}
+
+.nav{
+    padding: 0 10px 0 10px;
+    border-bottom: 2px solid transparent;
+}
+.nav:hover{
+    border-bottom: 2px solid black;
+    transition-duration: 1s;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.close-icon{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: gray; /* Matches the text color */
+    -webkit-mask-image: url('images/close-button.png');
+    mask-image: url('images/close-button.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-op{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: gray; /* Matches the text color */
+    -webkit-mask-image: url('images/work-icon.png');
+    mask-image: url('images/work-icon.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-oil{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    background-color: gray; /* Matches the text color */
+    -webkit-mask-image: url('images/oil-icon.png');
+    mask-image: url('images/oil-icon.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-char{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    background-image: url('images/char.svg');
+}
+.icon-expand{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    background-color: gray; /* Matches the text color */
+    -webkit-mask-image: url('images/icons8-expand-30.png');
+    mask-image: url('images/icons8-expand-30.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-email{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    background-color: white; /* Matches the text color */
+    -webkit-mask-image: url('images/email.png');
+    mask-image: url('images/email.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-copy{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    z-index: 1;
+    background-color: white; /* Matches the text color */
+    -webkit-mask-image: url('images/copy.png');
+    mask-image: url('images/copy.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-researcher{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    background-color: gray; /* Matches the text color */
+    -webkit-mask-image: url('images/team.png');
+    mask-image: url('images/team.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-datasets{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    background-color: gray; /* Matches the text color */
+    -webkit-mask-image: url('images/datasets.svg');
+    mask-image: url('images/datasets.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-home{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    background-color: gray; /* Matches the text color */
+    -webkit-mask-image: url('images/home.png');
+    mask-image: url('images/home.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+.icon-about{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+    background-color: gray; /* Matches the text color */
+    -webkit-mask-image: url('images/about.svg');
+    mask-image: url('images/about.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+
+
+.glass{
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: backdrop-filter 1s ease, -webkit-backdrop-filter 1s ease;
+}
+
+
+.slide-up-element {
+    /* Apply the animation */
+    animation-name: slideUp;
+    animation-duration: 1s; /* How long the animation takes */
+    animation-timing-function: ease-out; /* The speed curve */
+    animation-fill-mode: forwards; /* Ensures the element stays in its final state */
+}
+
+@keyframes slideUp {
+    from {
+        /* Start 100% of its own height down, and invisible */
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        /* End in its original position, visible */
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomBounce {
+  0%   { transform: scale(0.9); opacity: 0 }
+  70%  { transform: scale(1.05); opacity: 1 }
+  100% { transform: scale(1); }
+}

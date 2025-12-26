@@ -1,2 +1,5 @@
-# test/debug
+# Python
+__pycache__/
+
+# Local test/debug
 test/
