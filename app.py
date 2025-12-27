@@ -27,7 +27,7 @@ OTHERS_DIR = os.path.join(
 )
 
 # Models
-with open(os.path.join(MODEL_DIR,"model_nonprecious_lightgbm_tuned.pkl"), "rb") as f:
+with open(os.path.join(MODEL_DIR,"model_precious_stacking_tuned.pkl"), "rb") as f:
     precious_model = pickle.load(f)
 with open(os.path.join(MODEL_DIR,"model_nonprecious_lightgbm_tuned.pkl"), "rb") as f:
     non_precious_model = pickle.load(f)
@@ -42,12 +42,15 @@ with open(os.path.join(OTHERS_DIR,"npscaler.pkl"), 'rb') as file:
 
 def preprocessing(is_precious, X):
     if is_precious:
+        print("precious")
         X_scaled = pscaler.transform(X)
         results_precious = precious_model.predict(X_scaled)
         return results_precious
     else:
+        print("non precious")
         X_scaled = npscaler.transform(X)
         results_non_precious = non_precious_model.predict(X_scaled)
+        print(results_non_precious)
         return results_non_precious
 
 
@@ -67,7 +70,7 @@ def predict():
     app.logger.info(f'output :{data}')
 
     # Oil components
-    is_precious = data['is_precious']
+    is_precious = True if data['is_precious'] == 'true' else False
     form = data['form']
     Acid = data['Acid']
     Alcohol = data['Alcohol']
@@ -84,7 +87,6 @@ def predict():
     Temp = data['Temp']
     Time = data['Time']
     Pressure = data['Pressure']
-
     if(Acid == '0' and Alcohol == '0' and Ketone == '0' and Aldehyde == '0' and Furan == '0' and Sugar == '0' and
        Phenol == '0' and Ester == '0' and Ether == '0' and Cl == '0' and Temp == '0' and Time == '0' and Pressure == '0'):
         return jsonify({"error": "Invalid input"}), 400
@@ -93,7 +95,15 @@ def predict():
     for col in feature_cols:
         try:
             if col == 'form_encoded':
-                clean_data[col] = float(labelencoder.transform(form))
+                clean_data[col] = float(labelencoder.transform([form])[0])
+            elif col == 'Cat loading (%wt)':
+                clean_data[col] = float(Cl)
+            elif col == 'Temp (c)':
+                clean_data[col] = float(Temp)
+            elif col == 'time (h)':
+                clean_data[col] = float(Time)
+            elif col == 'Pressure (bar)':
+                clean_data[col] = float(Pressure)
             else:
                 clean_data[col] = float(data[col])
         except (KeyError, ValueError, TypeError):
@@ -101,11 +111,15 @@ def predict():
 
     entry = pd.DataFrame([clean_data]).to_numpy()
     app.logger.info("Stucked at predict")
-    pred = preprocessing(is_precious,entry)
-    app.logger.info("Passed at predict")
-    res = {'prediction':pred}
+    try:
+        pred = preprocessing(is_precious,entry)
+        app.logger.info("Passed at predict")
+        res = {'prediction':pred[0]}
+        return jsonify(res)
+    except:
+        return jsonify({"test":"error"})
 
-    return jsonify(res)
+    
 
 @app.route('/Procedure',methods=['GET'])
 def algorithm():
