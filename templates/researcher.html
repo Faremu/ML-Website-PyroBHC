@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyroBHC</title>
+    <!-- Include the Tailwind CDN script -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- You can also link your own custom CSS file here if needed -->
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="sticky w-full h-16">
+        <div class="w-full h-full flex flex-row justify-between items-center px-5 shadow ">
+            <p class="text-2xl font-bold text-black">PyroHBC</p>
+            <div class="flex flex-row lg:mr-10 h-16">
+                <a href="/" class="nav py-5">
+                    <i class="icon-home lg:hidden"></i><span class="hidden lg:inline">Home</span>
+                </a>
+                <a href="/Datasets" class="nav py-5">
+                    <i class="icon-datasets lg:hidden"></i><span class="hidden lg:inline">Datasets</span>
+                </a>
+                <a href="/Researcher" class="nav py-5 border-orange-400 border-b-2">
+                    <i class="icon-researcher lg:hidden"></i><span class="hidden lg:inline">Researcher</span>
+                </a>
+                <a href="/About" class="nav py-5">
+                    <i class="icon-about lg:hidden"></i><span class="hidden lg:inline">About</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-10 flex flex-col justify-center items-center">
+        <div class="flex flex-row space-x-1 items-center mb-10">
+            <i class="icon-researcher"></i>
+            
+            <h1 class="text-3xl font-bold text-gray-700">Researcher</h1>
+        </div>
+        <!-- Grid start -->
+        <div class="grid gap-y-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-5 md:mx-20 slide-up-element">
+            <!-- First person -->
+             <div class="relative h-40 2xl:h-32 ring-2 hover:ring-4 hover:ring-gray-200 duration-300 ring-gray-400 p-3 rounded-tl-lg rounded-br-lg">
+                <h1 class="font-bold text-xl">Dr. Atikhun Chotirattanachote</h1>
+                <p class="text-sm text-gray-600">
+                    Department of Agricultural Engineering
+                </p>
+                <p class="text-sm text-gray-600">Faculty of Engineering, Khon Kaen University</p>
+                <p class="text-sm text-gray-600">Khon Kaen 40002, Thailand</p>
+                <div class="min-w-36 flex flex-row items-center duration-300 space-x-1 bg-orange-400 w-fit hover:scale-105 rounded-xl py-1 px-2 absolute -bottom-[30px] right-2">
+                    <i class="icon-email mr-1"></i>
+                    <span class="text-sm font-bold text-white">A.Chotirattanachote@gmail.com</span>
+                </div>
+            </div>
+            <div class="relative h-40 2xl:h-32 ring-2 hover:ring-4 hover:ring-gray-200 duration-300 ring-gray-400 p-3 rounded-tl-lg rounded-br-lg">
+                <h1 class="font-bold text-xl">Dr. Nuttapat Thiensuwan</h1>
+                <p class="text-sm text-gray-600">
+                    Department of Chemical Technology 
+                </p>
+                <p class="text-sm text-gray-600">Faculty of Science, Chulalongkorn University</p>
+                <p class="text-sm text-gray-600">Pathumwan, Bangkok 10330, Thailand</p>
+                <div class="min-w-36 flex flex-row items-center duration-300 space-x-1 bg-orange-400 w-fit hover:scale-105 rounded-xl py-1 px-2 absolute -bottom-[30px] right-2">
+                    <i class="icon-email mr-1"></i>
+                    <span class="text-sm font-bold text-white">Nutskn33@gmail.com</span>
+                </div>
+            </div>
+            <div class=" relative h-40 2xl:h-32 ring-2 hover:ring-4 hover:ring-gray-200 duration-300 ring-gray-400 p-3 rounded-tl-lg rounded-br-lg">
+                <h1 class="font-bold text-xl">Prof. Dr. Toshiyuki Yokoi</h1>
+                <p class="text-sm text-gray-600">
+                    Nanospace Catalysis Research Unit
+                </p>
+                <p class="text-sm text-gray-600">Institute of Integrated Research, Institute of Science Tokyo</p>
+                <p class="text-sm text-gray-600"> 4259 Nagatsuta, Midori-ku, Yokohama 226-8503, Japan</p>
+                <div class="min-w-36 flex flex-row items-center duration-300 space-x-1 bg-orange-400 w-fit hover:scale-105 rounded-xl py-1 px-2 absolute -bottom-[30px] right-2">
+                    <i class="icon-email mr-1"></i>
+                    <span class="text-sm font-bold text-white">Yokoi@cat.res.titech.ac.jp</span>
+                </div>
+            </div>
+            <div class="relative h-40 2xl:h-32 ring-2 hover:ring-4 hover:ring-gray-200 duration-300 ring-gray-400 p-3 rounded-tl-lg rounded-br-lg">
+                <h1 class="font-bold text-xl">Prof. Dr. Chawalit Ngamcharussrivichai</h1>
+                <p class="text-sm text-gray-600">
+                    Department of Chemical Technology, 
+                </p>
+                <p class="text-sm text-gray-600">Faculty of Science, Chulalongkorn University </p>
+                <p class="text-sm text-gray-600">Pathumwan, Bangkok 10330, Thailand</p>
+                <div class="min-w-36 flex flex-row items-center duration-300 space-x-1 bg-orange-400 w-fit hover:scale-105 rounded-xl py-1 px-2 absolute -bottom-[30px] right-2">
+                    <i class="icon-email mr-1"></i>
+                    <span class="text-sm font-bold text-white">Chawalit.ng@chula.ac.th</span>
+                </div>
+            </div>
+            <div class="relative h-40 2xl:h-32 ring-2 hover:ring-4 hover:ring-gray-200 duration-300 ring-gray-400 p-3 rounded-tl-lg rounded-br-lg">
+                <h1 class="font-bold text-xl">Assoc. Prof. Dr. Somboon Sukpancharoen</h1>
+                <p class="text-sm text-gray-600">
+                    Department of Agricultural Engineering, 
+                </p>
+                <p class="text-sm text-gray-600">Faculty of Engineering</p>
+                <p class="text-sm text-gray-600">Khon Kaen University, Khon Kaen 40002, Thailand</p>
+                <div class="min-w-36 flex flex-row items-center duration-300 space-x-1 bg-orange-400 w-fit hover:scale-105 rounded-xl py-1 px-2 absolute -bottom-[30px] right-2">
+                    <i class="icon-email mr-1"></i>
+                    <span class="text-sm font-bold text-white">Sombsuk@kku.ac.th</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

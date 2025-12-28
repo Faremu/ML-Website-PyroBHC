@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyroHBC</title>
+    <!-- Include the Tailwind CDN script -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- You can also link your own custom CSS file here if needed -->
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="sticky w-full h-16">
+        <div class="w-full h-full flex flex-row justify-between items-center px-5 shadow ">
+            <p class="text-2xl font-bold text-black">PyroBHC</p>
+            <div class="flex flex-row lg:mr-10 h-16">
+                <a href="/" class="nav py-5">
+                    <i class="icon-home lg:hidden"></i><span class="hidden lg:inline">Home</span>
+                </a>
+                <a href="/Datasets" class="nav py-5 border-orange-400 border-b-2">
+                    <i class="icon-datasets lg:hidden"></i><span class="hidden lg:inline">Datasets</span>
+                </a>
+                <a href="/Researcher" class="nav py-5">
+                    <i class="icon-researcher lg:hidden"></i><span class="hidden lg:inline">Researcher</span>
+                </a>
+                <a href="/About" class="nav py-5">
+                    <i class="icon-about lg:hidden"></i><span class="hidden lg:inline">About</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="m-10 flex flex-col justify-center items-center">
+        <div class="flex flex-row space-x-1 mb-10 items-center">
+            <i class="icon-datasets"></i>
+            <h1 class="text-3xl font-bold text-gray-700">Datasets</h1>
+        </div>
+        <div class="flex flex-col m-5 space-y-5 lg:flex-row lg:space-x-10">
+            <div
+            class="w-64 sm:w-[600px] slide-up-element ring-1 z-5 ring-gray-600 bg-gradient-to-r from-orange-300 to-orange-50 text-gray-700 hover:ring-2 hover:ring-gray-600 rounded-lg hover:cursor-pointer duration-300">
+                <details class="w-full">
+                    <summary class="list-item relative p-3 w-full h-full">
+                        <span class="font-bold mr-2">dataset(.xlsx)</span>  
+                        <span><small>click for more information</small></span>
+                    </summary>
+                    <div class="relative z-0 bg-white p-3 rounded-lg ">
+                        <span class="font-bold">Information</span>
+                        <div class="text-sm text-gray-500">
+                            <p class="">This dataset consists of 14 input features and 1 output variables.</p>
+                            <div class="flex flex-row space-x-2">
+                                <span><u>Input features</u>:</span>
+                                <div>
+                                    <p>form, Acid, Alcohol, Ketone, Aldehyde, Furan, Sugar, Phenol, Ester, Ether</p>
+                                    <p>Cat loading (%wt), Temp (c), time (h), Pressure (bar)</p>
+                                </div>
+                            </div>
+                            
+                            <span><u>Output</u>: Bio_oil(%), Bio_char(%), Bio_gas(%)</span>
+                            <div class="flex flex-row justify-between text-xs text-gray-500">
+                                <span>File size: 136.0KB</span>
+                                <span>Date: 28-12-2568</span> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                </details>
+                
+            </div>
+            <div class="slide-up-element w-fit">
+                <a href="" class="flex flex-row items-center justify-center space-x-2 ring-1 ring-gray-600 rounded-lg p-3 hover:ring-2 hover:ring-gray-600">
+                    <i class="download-icon"></i>
+                    <span>Download</span>
+                    
+                </a>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+</body>
+</html>

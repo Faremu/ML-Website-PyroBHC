@@ -7,28 +7,109 @@ body{
     font-variation-settings:
         "GRAD" 0;
 }
-.pinput {
-    border-radius: 0.25rem;    /* rounded */
-    width: 5rem;               /* w-20 */
-    height: 1.25rem;            /* h-6 */
-    margin-left: 1.25rem;      /* ml-5 */
 
-    /* ring-2 ring-black */
-    box-shadow: 0 0 0 1px #000; /* Tailwind ring = outline via box-shadow */
+@layer components {
+    .pinput {
+        border-radius: 0.25rem;    /* rounded */
+        width: 5rem;               /* w-20 */
+        height: 1.25rem;            /* h-6 */
+        margin-left: 1.25rem;      /* ml-5 */
 
-    background-color: #93c5fd; /* bg-blue-300 */
-    text-align: center;
+        /* ring-2 ring-black */
+        box-shadow: 0 0 0 1px #000; /* Tailwind ring = outline via box-shadow */
+
+        background-color: #ffe09c; /* bg-blue-300 */
+        text-align: center;
+    }
+    .download-icon{
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        z-index: 1;
+        background-color: gray; /* Matches the text color */
+        -webkit-mask-image: url('images/download.png');
+        mask-image: url('images/download.png');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+    }
+    .icon-char{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        background-image: url('images/char.svg');
+    }
+    .icon-expand{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+        background-color: gray; /* Matches the text color */
+        -webkit-mask-image: url('images/icons8-expand-30.png');
+        mask-image: url('images/icons8-expand-30.png');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+    }
+    .icon-email{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+        background-color: white; /* Matches the text color */
+        -webkit-mask-image: url('images/email.png');
+        mask-image: url('images/email.png');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+    }
+    .icon-copy{
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        z-index: 1;
+        background-color: white; /* Matches the text color */
+        -webkit-mask-image: url('images/copy.png');
+        mask-image: url('images/copy.png');
+        mask-size: contain;
+        mask-repeat: no-repeat;
+    }
+    .icon-datasets, .icon-home, .icon-researcher, .icon-about {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: gray; /* Inherits color from text-gray-700 etc */
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+    }
+    .icon-researcher{
+        -webkit-mask-image: url('images/team.png');
+        mask-image: url('images/team.png');
+    }
+    .icon-datasets{
+        -webkit-mask-image: url('images/datasets.svg');
+        mask-image: url('images/datasets.svg');
+    }
+    .icon-home{
+        -webkit-mask-image: url('images/home.png');
+        mask-image: url('images/home.png');
+    }
+    .icon-about{
+        -webkit-mask-image: url('images/about.svg');
+        mask-image: url('images/about.svg');
+    }
+    .nav{
+        padding: 0 10px 0 10px;
+        border-bottom: 2px solid transparent;
+    }
+    .nav:hover{
+        border-bottom: 2px solid oklch(75% 0.183 55.934);
+        transition-duration: 1s;
+
+    }
+
 }
 
-.nav{
-    padding: 0 10px 0 10px;
-    border-bottom: 2px solid transparent;
-}
-.nav:hover{
-    border-bottom: 2px solid black;
-    transition-duration: 1s;
-
-}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -55,112 +136,31 @@ input::-webkit-inner-spin-button {
     mask-size: contain;
     mask-repeat: no-repeat;
 }
-.icon-oil{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    z-index: 1;
-    background-color: gray; /* Matches the text color */
-    -webkit-mask-image: url('images/oil-icon.png');
-    mask-image: url('images/oil-icon.png');
-    mask-size: contain;
-    mask-repeat: no-repeat;
+.png-stroke {
+  /* Initial state: No shadow */
+  filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+  /* transition: filter 0.2s ease-in-out; */
+  cursor: pointer;
 }
-.icon-char{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    z-index: 1;
-    background-image: url('images/char.svg');
-}
-.icon-expand{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    z-index: 1;
-    background-color: gray; /* Matches the text color */
-    -webkit-mask-image: url('images/icons8-expand-30.png');
-    mask-image: url('images/icons8-expand-30.png');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-}
-.icon-email{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    z-index: 1;
-    background-color: white; /* Matches the text color */
-    -webkit-mask-image: url('images/email.png');
-    mask-image: url('images/email.png');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-}
-.icon-copy{
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    z-index: 1;
-    background-color: white; /* Matches the text color */
-    -webkit-mask-image: url('images/copy.png');
-    mask-image: url('images/copy.png');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-}
-.icon-researcher{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    z-index: 1;
-    background-color: gray; /* Matches the text color */
-    -webkit-mask-image: url('images/team.png');
-    mask-image: url('images/team.png');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-}
-.icon-datasets{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    z-index: 1;
-    background-color: gray; /* Matches the text color */
-    -webkit-mask-image: url('images/datasets.svg');
-    mask-image: url('images/datasets.svg');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-}
-.icon-home{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    z-index: 1;
-    background-color: gray; /* Matches the text color */
-    -webkit-mask-image: url('images/home.png');
-    mask-image: url('images/home.png');
-    mask-size: contain;
-    mask-repeat: no-repeat;
-}
-.icon-about{
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    z-index: 1;
-    background-color: gray; /* Matches the text color */
-    -webkit-mask-image: url('images/about.svg');
-    mask-image: url('images/about.svg');
-    mask-size: contain;
-    mask-repeat: no-repeat;
+.png-stroke:hover {
+  /* This targets the shape of the PNG pixels */
+  filter: 
+    drop-shadow(5px 0 0 #ffffff) 
+    drop-shadow(-5px 0 0 #ffffff) 
+    drop-shadow(0 5px 0 #ffffff) 
+    drop-shadow(0 -5px 0 #ffffff);
+  
+  /* Optional: Smooths out jagged edges on some browsers */
+  will-change: filter;
 }
 
-
-.glass{
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: backdrop-filter 1s ease, -webkit-backdrop-filter 1s ease;
+.text-stroke {
+  color: white; /* Text color must be set */
+  text-shadow:
+    /* Standard directions */
+    2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    /* Diagonal corners for extra width */
+    1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
 }
 
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyroBHC</title>
+    <!-- Include the Tailwind CDN script -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- You can also link your own custom CSS file here if needed -->
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+    <div class="sticky w-full h-16">
+        <div class="w-full h-full flex flex-row justify-between items-center px-5 shadow ">
+            <p class="text-2xl font-bold text-black">PyroHBC</p>
+            <div class="flex flex-row lg:mr-10 h-16">
+                <a href="/" class="nav py-5">
+                    <i class="icon-home lg:hidden"></i><span class="hidden lg:inline">Home</span>
+                </a>
+                <a href="/Datasets" class="nav py-5">
+                    <i class="icon-datasets lg:hidden"></i><span class="hidden lg:inline">Datasets</span>
+                </a>
+                <a href="/Researcher" class="nav py-5">
+                    <i class="icon-researcher lg:hidden"></i><span class="hidden lg:inline">Researcher</span>
+                </a>
+                <a href="/About" class="nav py-5 border-orange-400 border-b-2">
+                    <i class="icon-about lg:hidden"></i><span class="hidden lg:inline">About</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-10 flex flex-col justify-center items-center">
+        <div class="flex flex-row space-x-1 items-center mb-10">
+            <i class="icon-about"></i>
+            
+            <h1 class="text-3xl font-bold text-gray-700">About</h1>
+        </div>
+        <!-- Grid start -->
+        <p class="mx-10 sm:mx-40">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod consectetur ducimus aut quia temporibus inventore, laborum nemo adipisci repudiandae molestiae. Nobis, repellat consequuntur. Doloribus facere architecto, ea vel aut inventore!</p>
+    </div>
+</body>
+</html>
