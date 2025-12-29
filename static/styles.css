@@ -55,7 +55,7 @@ body{
         width: 30px;
         height: 30px;
         z-index: 1;
-        background-color: white; /* Matches the text color */
+        background-color: rgb(229, 149, 0); /* Matches the text color */
         -webkit-mask-image: url('images/email.png');
         mask-image: url('images/email.png');
         mask-size: contain;

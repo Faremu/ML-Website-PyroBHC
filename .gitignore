@@ -1,5 +1,8 @@
 # Python
 __pycache__/
 
+# Catboost
+catboost_info/
+
 # Local test/debug
 test/
