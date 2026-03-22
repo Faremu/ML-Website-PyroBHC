@@ -10,15 +10,13 @@ body{
 
 @layer components {
     .pinput {
-        border-radius: 0.25rem;    /* rounded */
-        width: 5rem;               /* w-20 */
-        height: 1.25rem;            /* h-6 */
-        margin-left: 1.25rem;      /* ml-5 */
+        border-radius: 0.25rem;
+        width: 5rem;
+        height: 1.25rem;
+        margin-left: 1.25rem;
+        margin-bottom: 0.2rem;
 
-        /* ring-2 ring-black */
-        box-shadow: 0 0 0 1px #000; /* Tailwind ring = outline via box-shadow */
-
-        background-color: #ffe09c; /* bg-blue-300 */
+        background-color: #fff7e6;
         text-align: center;
     }
     .download-icon{
